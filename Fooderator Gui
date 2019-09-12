@@ -1,0 +1,42 @@
+from tkinter import*
+#create the window
+window = Tk()
+window.title("Fooderator")
+window.geometry('1000x720')
+#create a label 
+lbl = Label(window,text="Hello Farmer",borderwidth=2, relief="sunken", font=("Arial Bold",35))
+lbl.grid(column=2,row=5)
+#button click and button
+def clicked():
+    lbl.configure(text="Current Temperature: 72 F", font=("Arial Bold",25))
+btn = Button(window,text="Show Temperature",command=clicked, bg ="green", fg ="white")
+btn.grid(column=1,row=0)
+def clicked():
+    lbl.configure(text="Lowering to 70 F ", font=("Arial Bold",25))
+btn = Button(window,text="Lower Temperature",command=clicked, bg ="green", fg ="white")
+btn.grid(column=2,row=0)
+def clicked():
+    lbl.configure(text="Raising to 75 F ", font=("Arial Bold",25))
+btn = Button(window,text="Raise Temperature",command=clicked, bg ="green", fg ="white")
+btn.grid(column=3,row=0)
+def clicked():
+    lbl.configure(text="60% RH", font=("Arial Bold",30))
+btn = Button(window,text="Show Humidity",command=clicked, bg ="green", fg ="white")
+btn.grid(column=1,row=1)
+def clicked():
+    lbl.configure(text="5.5", font=("Arial Bold",30))
+btn = Button(window,text="Show pH level",command=clicked, bg ="green", fg ="white")
+btn.grid(column=1,row=6)
+def clicked():
+    lbl.configure(text="5.5 mg/L", font=("Arial Bold",30))
+btn = Button(window,text="Show Dissolved Oxygen",command=clicked, bg ="green", fg ="white")
+btn.grid(column=1,row=3)
+def clicked():
+    lbl.configure(text="1,200 ppm", font=("Arial Bold",30))
+btn = Button(window,text="Show C02 Concentration",command=clicked, bg ="green", fg ="white")
+btn.grid(column=1,row=4)
+def clicked():
+    lbl.configure(text="1.6 mS", font=("Arial Bold",30))
+btn = Button(window,text="Show Conductivity",command=clicked, bg ="green", fg ="white")
+btn.grid(column=1,row=5)
+window.mainloop()
